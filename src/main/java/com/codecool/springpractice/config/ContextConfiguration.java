@@ -4,14 +4,14 @@ package com.codecool.springpractice.config;
         import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages="com.codecool.springpractice") // this is not so nice, put everything thats in a context into a subpackage
+@ComponentScan(basePackages="com.codecool.springpractice.model") // Define which packages to scan for Components
 public class ContextConfiguration {
 
 /*
-you can define custom constructors too
+    //you can define custom constructors too
     @Bean
-    public MessageService getMessageService(){
-        return new EmailService(23, "valami");
+    public SampleModel getMyModel(){
+        return new SampleModel(23, "valami");
     }
 */
 }

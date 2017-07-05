@@ -11,11 +11,9 @@ public class SpringpracticeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringpracticeApplication.class, args);
 
+		// Initialize and setup the context
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(ContextConfiguration.class);
         ctx.refresh();
-        SomeClass farmer = ctx.getBean(SomeClass.class);
-        System.out.println("test:"+ farmer.someFunction());
-        ctx.close();
     }
 }
