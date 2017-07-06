@@ -11,6 +11,7 @@
 	<name>springpractice</name>
 	<description>Demo project for Spring Boot</description>
 
+    <!-- base POM for Spring boot projects -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -25,11 +26,26 @@
 	</properties>
 
 	<dependencies>
+        <!-- Spring boot + web package + Thymeleaf support -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
+        <!-- Relational database (JPA) support -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- PostgreSQL driver -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.1.1</version>
+		</dependency>
+
+        <!-- Spring boot test framework -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -39,7 +55,8 @@
 
 	<build>
 		<plugins>
-			<plugin>
+            <!-- Allows to package executable jar or war archives and run an application "in-place2 -->
+            <plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
