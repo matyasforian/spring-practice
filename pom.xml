@@ -55,7 +55,7 @@
 
 	<build>
 		<plugins>
-            <!-- Allows to package executable jar or war archives and run an application "in-place2 -->
+            <!-- Allows to package executable jar or war archives and run an application "in-place" -->
             <plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

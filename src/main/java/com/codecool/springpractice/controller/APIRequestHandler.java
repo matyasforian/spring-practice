@@ -7,8 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 // Use code like this to make an API, for e.g. mobile clients, AJAX calls,..
-@RestController // A @Controller, where requests return plain strings. This is a "subannotation" of @Controller.
+
+// A @Controller where requests return plain strings.
+// This is a "subannotation" of @Controller.
+@RestController
 public class APIRequestHandler {
 
     private DBHandler dbHandler;
@@ -20,14 +25,6 @@ public class APIRequestHandler {
 
     @RequestMapping("/simple")
     public String queryDB(@RequestParam(value="name", required=false, defaultValue="Smith") String name) {
-
-        dbHandler.deleteAll();
-        dbHandler.saveSampleORMEntity(new SampleORMEntity("Jack", "Smith"));
-        dbHandler.saveSampleORMEntity(new SampleORMEntity("Adam", "Johnson"));
-        dbHandler.saveSampleORMEntity(new SampleORMEntity("Kim", "Smith"));
-        dbHandler.saveSampleORMEntity(new SampleORMEntity("David", "Williams"));
-        dbHandler.saveSampleORMEntity(new SampleORMEntity("Peter", "Davis"));
-
         String result = "";
         for(SampleORMEntity cust: dbHandler.findByLastName(name)){
             result += "<div>" + cust.toString() + "</div>";
