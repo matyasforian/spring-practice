@@ -1,6 +1,5 @@
 package com.codecool.springpractice.database;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +12,6 @@ public class DBHandler {
 
     private SampleORMRepository repository;
 
-    @Autowired
     public DBHandler(SampleORMRepository repository) {
         this.repository = repository;
 

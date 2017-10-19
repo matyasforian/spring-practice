@@ -17,8 +17,8 @@ public class SampleORMEntity {
     @Column(name = "lastname")
     private String lastName;
 
-    protected SampleORMEntity() {
-    }
+    // This is needed so Spring can create an instance of it automatically
+    protected SampleORMEntity() { }
 
     public SampleORMEntity(String firstName, String lastName) {
         this.firstName = firstName;

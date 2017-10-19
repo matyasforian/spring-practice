@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 // Use code like this to make an API, for e.g. mobile clients, AJAX calls,..
 
 // A @Controller where requests return plain strings.
