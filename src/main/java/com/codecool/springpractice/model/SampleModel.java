@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class SampleModel {
 
-    public String valami;
+    public String something;
 
     public SampleModel() {
-        valami = "I AM THE MODEL!!!!!!!!!!!!!";
+        something = "I AM THE MODEL!!!!!!!!!!!!!";
     }
 
 }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 // Used to hold DB access methods. Subannotation of @Component
-// The extra functionality comapared to @Component is that any platform specific exceptions are caught and then
+// The extra functionality compared to @Component is that any platform specific exceptions are caught and then
 // rethrown as one of Spring’s unchecked data access exceptions.
 @Repository
 public class DBHandler {

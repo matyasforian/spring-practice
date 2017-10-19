@@ -4,6 +4,7 @@ import com.codecool.springpractice.database.DBHandler;
 import com.codecool.springpractice.database.SampleORMEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,7 @@ public class APIRequestHandler {
         this.dbHandler = dbHandler;
     }
 
-    @RequestMapping("/simple")
+    @RequestMapping(value = "/simple", method = RequestMethod.GET)
     public String queryDB(@RequestParam(value="name", required=false, defaultValue="Smith") String name) {
         String result = "";
         for(SampleORMEntity cust: dbHandler.findByLastName(name)){
