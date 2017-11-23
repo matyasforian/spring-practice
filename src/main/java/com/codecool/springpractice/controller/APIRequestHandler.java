@@ -17,7 +17,7 @@ public class APIRequestHandler {
 
     private DBHandler dbHandler;
 
-    @Autowired
+
     public APIRequestHandler(DBHandler dbHandler) {
         this.dbHandler = dbHandler;
     }
