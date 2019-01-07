@@ -15,20 +15,26 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.8.RELEASE</version>
+		<version>2.1.1.RELEASE</version>
 	</parent>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
 		<!-- The versions of these dependencies are defined by the spring-boot-dependencies pom in the parent pom -->
-        <!-- Spring boot + web package + Thymeleaf support -->
+        <!-- Spring boot + Thymeleaf support -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
         <!-- Relational database (JPA) support -->
         <dependency>
