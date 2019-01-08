@@ -5,5 +5,7 @@ applications:
   memory: 128M
   buildpack: liberty-for-java
   path: springpractice-0.0.1-SNAPSHOT.jar
+# taken from https://github.com/cloudfoundry/java-buildpack/issues/663#issuecomment-450671683 
   env:
-      JAVA_OPTS: "-Xmx=120m"
+    JAVA_OPTS: '-XX:ReservedCodeCacheSize=32M -XX:MaxDirectMemorySize=32M'
+    JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {stack_threads: 30}, jre: {version: 11.+}]'
