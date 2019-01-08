@@ -1,7 +1,0 @@
----
-applications:
-- name: spring-practice-matyasCC
-  random-route: true
-  memory: 128M
-  buildpack: liberty-for-java
-  path: target/springpractice-0.0.1-SNAPSHOT.jar
