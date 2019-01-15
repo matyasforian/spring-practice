@@ -20,4 +20,8 @@ public class SpringpracticeApplicationTests {
         Assert.assertEquals(4, 4);
     }
 
+    @Test
+    public void someOtherTest2() {
+        Assert.assertEquals(4, 4);
+    }
 }
