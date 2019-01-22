@@ -10,10 +10,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringpracticeApplicationTests {
 
-	@Test
-	public void contextLoads() {
-		Assert.assertEquals(3, 3);
-	}
+    @Test
+    public void contextLoads() {
+        Assert.assertEquals(7, 3);
+    }
 
     @Test
     public void someOtherTest() {
