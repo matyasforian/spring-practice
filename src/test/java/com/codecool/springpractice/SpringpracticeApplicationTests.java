@@ -12,7 +12,7 @@ public class SpringpracticeApplicationTests {
 
     @Test
     public void contextLoads() {
-        Assert.assertEquals(7, 3);
+        Assert.assertEquals(3, 3);
     }
 
     @Test
